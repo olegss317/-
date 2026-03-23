@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>贪吃蛇 Pro - 极致体验</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>贪吃蛇 <span class="pro-tag">PRO</span></h1>
+        
+        <div class="score-board">
+            <div class="score-item">
+                <span class="label">当前分数</span>
+                <span id="score" class="value">0</span>
+            </div>
+            <div class="score-item">
+                <span class="label">最高记录</span>
+                <span id="high-score" class="value">0</span>
+            </div>
+        </div>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div id="game-over-overlay" class="overlay hidden">
+                <h2>游戏结束</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <button id="restart-btn-overlay">再玩一次</button>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button id="start-btn">开始游戏</button>
+            <button id="pause-btn" disabled>暂停</button>
+        </div>
+
+        <div class="mobile-controls">
+            <div class="control-row">
+                <button class="arrow-btn" id="up-btn">▲</button>
+            </div>
+            <div class="control-row">
+                <button class="arrow-btn" id="left-btn">◀</button>
+                <button class="arrow-btn" id="down-btn">▼</button>
+                <button class="arrow-btn" id="right-btn">▶</button>
+            </div>
+        </div>
+
+        <p class="instructions">PC端: 方向键或 WASD | 移动端: 点击屏幕按钮</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
